@@ -49,7 +49,7 @@ const addProduct = async(req,res)=>{
 }
 
 //function for list product
-const listProducts = async(requestAnimationFrame,res)=>{
+const listProducts = async(req,res)=>{
     try {
         
         const products = await productModel.find({});
@@ -73,7 +73,15 @@ const removeProduct = async(req,res)=>{
 }
 
 //function for single product info
-const singleProduct = async(requestAnimationFrame,res)=>{
+const singleProduct = async(req,res)=>{
+    try {
+        const {productId} = req.body
+        const product = await productModel.findById(productId)
+        res.json({success:true,product})
+    } catch (error) {
+        console.log(error)
+        res.json({success:false,message:error.message})
+    }
     
 }
 
