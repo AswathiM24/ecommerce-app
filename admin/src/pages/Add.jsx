@@ -81,7 +81,7 @@ const Add = () => {
       <div>
         <p className='mb-2'>Product Sizes</p>
         <div className='flex gap-3'>
-          <div>
+          <div onClick={()=>setSizes(prev => prev.includes("S") ? prev.filter(item => item!== "S" ):[...prev])}>
             <p className='bg-slate-200 px-3 py-1 cursor-pointer'>S</p>
           </div>
           <div>
