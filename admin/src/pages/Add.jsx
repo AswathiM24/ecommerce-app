@@ -82,18 +82,18 @@ const Add = () => {
         <p className='mb-2'>Product Sizes</p>
         <div className='flex gap-3'>
           <div onClick={()=>setSizes(prev => prev.includes("S") ? prev.filter(item => item!== "S" ):[...prev])}>
-            <p className='bg-slate-200 px-3 py-1 cursor-pointer'>S</p>
+            <p className={`bg-slate-200 px-3 py-1 cursor-pointer`}>S</p>
           </div>
-          <div>
+          <div onClick={()=>setSizes(prev => prev.includes("M") ? prev.filter(item => item!== "M" ):[...prev])}>
             <p className='bg-slate-200 px-3 py-1 cursor-pointer'>M</p>
           </div>
-          <div>
+          <div onClick={()=>setSizes(prev => prev.includes("L") ? prev.filter(item => item!== "L" ):[...prev])}>
             <p className='bg-slate-200 px-3 py-1 cursor-pointer'>L</p>
           </div>
-          <div>
+          <div onClick={()=>setSizes(prev => prev.includes("XL") ? prev.filter(item => item!== "XL" ):[...prev])}>
             <p className='bg-slate-200 px-3 py-1 cursor-pointer'>XL</p>
           </div>
-          <div>
+          <div onClick={()=>setSizes(prev => prev.includes("XXL") ? prev.filter(item => item!== "XXL" ):[...prev])}>
             <p className='bg-slate-200 px-3 py-1 cursor-pointer'>XXL</p>
           </div>
         </div>
